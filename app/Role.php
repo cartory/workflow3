@@ -4,17 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Role extends Model
 {
-    use LogsActivity;
+    use LogsActivity, SoftDeletes;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = ['name', 'label'];
+
+    public function users(){
+        return $this->belongsToMany(User::class);
+    }
 
     /**
      * A role may be given various permissions.
