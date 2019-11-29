@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Theme;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use SebastianBergmann\Environment\Console;
 
 class HomeController extends Controller
 {
@@ -22,7 +26,9 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
-        return view('home');
+    {  
+        // $theme = Theme::findOrFail(Auth::user()->theme_id);
+        $theme = Auth::user()->getBackgroundColor();
+        return view('home', compact('theme'));
     }
 }

@@ -25,6 +25,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function getTextFont(){
+        return Theme::findOrFail($this->theme_id)->textFont;
+    }
+
+    public function getBackgroundColor(){
+        return Theme::findOrFail($this->theme_id)->backgroundColor;
+    }
+
+    public function theme(){
+        return $this->belongsTo(Theme::class, 'foreign_key', 'theme_id');
+    }
+
     public function roles(){
         return $this->belongsToMany(Role::class);
     }

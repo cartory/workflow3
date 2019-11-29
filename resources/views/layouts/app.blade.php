@@ -15,7 +15,17 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @stack('styles')
+
 </head>
+
+<style>
+    body {
+        @if ( Auth::check() )
+            background-color: {{ Auth::user()->getbackgroundColor() }};
+            font-size: {{ Auth::user()->getTextFont() }}px;
+        @endif
+    }
+</style>
 
 <body>
     <div id="app">

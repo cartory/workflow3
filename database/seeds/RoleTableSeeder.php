@@ -12,14 +12,14 @@ class RoleTableSeeder extends Seeder
      */
     public function run()
     {
-        (new Role())->fill([
+        Role::create([
             'name' => 'admin',
             'label' => 'admin'
-        ])->save();
-
-        (new Role())->fill([
+        ]);
+        
+        Role::create([
             'name' => 'user',
             'label' => 'user'
-        ])->save();
+        ]);
     }
 }
