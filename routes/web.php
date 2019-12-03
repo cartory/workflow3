@@ -16,7 +16,13 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/themes', 'ThemeController@index');
+Route::put('themes/{id}', 'ThemeController@update');
+
+// Route::resource('themes', 'ThemeController');
 
 //  ADMIN PANEL ROUTES
 Route::group([
@@ -31,7 +37,6 @@ Route::group([
     Route::resource('/activitylogs', 'Admin\ActivityLogsController')->only([
         'index', 'show', 'destroy'
     ]);
-
     Route::resource('/settings', 'Admin\SettingsController');
     Route::get('/generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator']);
     Route::post('/generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
