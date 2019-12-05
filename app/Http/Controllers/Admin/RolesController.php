@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Role;
 use App\Permission;
 use Illuminate\Http\Request;
+use Auth;
 
 class RolesController extends Controller
 {
@@ -25,7 +26,7 @@ class RolesController extends Controller
         } else {
             $roles = Role::latest()->paginate($perPage);
         }
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Visualizo la pagina principal de roles  '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.roles.index', compact('roles'));
     }
 
@@ -36,8 +37,8 @@ class RolesController extends Controller
      */
     public function create()
     {
-        $permissions = Permission::select('id', 'name', 'label')->get()->pluck('label', 'name');
-
+        $permissions = Permission::select('id', 'name', 'label')->get()->pluck('label', 'name');        
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Creo un nuevo rol a las '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.roles.create', compact('permissions'));
     }
 
@@ -61,7 +62,7 @@ class RolesController extends Controller
                 $role->givePermissionTo($permission);
             }
         }
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Guarda los cambios de la tabla rol '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return redirect('admin/roles')->with('flash_message', 'Role added!');
     }
 
@@ -75,7 +76,7 @@ class RolesController extends Controller
     public function show($id)
     {
         $role = Role::findOrFail($id);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Mostrar los roles a las '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.roles.show', compact('role'));
     }
 
@@ -90,7 +91,7 @@ class RolesController extends Controller
     {
         $role = Role::findOrFail($id);
         $permissions = Permission::select('id', 'name', 'label')->get()->pluck('label', 'name');
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Edito un rol a las  '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.roles.edit', compact('role', 'permissions'));
     }
 
@@ -116,7 +117,7 @@ class RolesController extends Controller
                 $role->givePermissionTo($permission);
             }
         }
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Actualizo los roles a las   '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return redirect('admin/roles')->with('flash_message', 'Role updated!');
     }
 
@@ -130,7 +131,7 @@ class RolesController extends Controller
     public function destroy($id)
     {
         Role::destroy($id);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Elimino un rol a las  '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return redirect('admin/roles')->with('flash_message', 'Role deleted!');
     }
 }
