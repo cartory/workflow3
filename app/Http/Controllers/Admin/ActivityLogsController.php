@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 use Spatie\Activitylog\Models\Activity;
 use Illuminate\Http\Request;
+use Auth;
 
 class ActivityLogsController extends Controller
 {
@@ -27,6 +28,10 @@ class ActivityLogsController extends Controller
             $activitylogs = Activity::latest()->paginate($perPage);
         }
 
+
+
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' entro al panel de actividades '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
+
         return view('admin.activitylogs.index', compact('activitylogs'));
     }
 
@@ -40,7 +45,7 @@ class ActivityLogsController extends Controller
     public function show($id)
     {
         $activitylog = Activity::findOrFail($id);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' entro al registro de actividad '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.activitylogs.show', compact('activitylog'));
     }
 
@@ -54,7 +59,7 @@ class ActivityLogsController extends Controller
     public function destroy($id)
     {
         Activity::destroy($id);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' elimino la actividad '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return redirect('admin/activitylogs')->with('flash_message', 'Activity deleted!');
     }
 }

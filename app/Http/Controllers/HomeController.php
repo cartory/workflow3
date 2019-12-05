@@ -29,6 +29,7 @@ class HomeController extends Controller
     {  
         // $theme = Theme::findOrFail(Auth::user()->theme_id);
         $theme = Auth::user()->getBackgroundColor();
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Ingreso Existosamente a las '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('home', compact('theme'));
     }
 }

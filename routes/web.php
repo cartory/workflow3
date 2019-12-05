@@ -29,7 +29,7 @@ Route::group([
     'prefix' => 'admin',
     'middleware' => 'admin' 
 ], function () {
-    Route::get('', 'Admin\AdminController@index');
+    Route::get('/', 'Admin\AdminController@index');
     Route::resource('/roles', 'Admin\RolesController');
     Route::resource('/permissions', 'Admin\PermissionsController');
     Route::resource('/users', 'Admin\UsersController');

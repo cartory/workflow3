@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Role;
 use App\User;
 use Illuminate\Http\Request;
+use Auth;
 
 class UsersController extends Controller
 {
@@ -25,7 +26,7 @@ class UsersController extends Controller
         } else {
             $users = User::latest()->paginate($perPage);
         }
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Entro a la pantalla principal de usuarios a las  '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.users.index', compact('users'));
     }
 
@@ -38,7 +39,7 @@ class UsersController extends Controller
     {
         $roles = Role::select('id', 'name', 'label')->get();
         $roles = $roles->pluck('label', 'name');
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Creo un nuevo usuario a las '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.users.create', compact('roles'));
     }
 
@@ -68,7 +69,7 @@ class UsersController extends Controller
         foreach ($request->roles as $role) {
             $user->assignRole($role);
         }
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Guardo los cambios en la tabla usuario a las '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return redirect('admin/users')->with('flash_message', 'User added!');
     }
 
@@ -82,7 +83,7 @@ class UsersController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Entro a mostrar usuario  '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.users.show', compact('user'));
     }
 
@@ -103,7 +104,7 @@ class UsersController extends Controller
         foreach ($user->roles as $role) {
             $user_roles[] = $role->name;
         }
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Edito un usuario a las  '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.users.edit', compact('user', 'roles', 'user_roles'));
     }
 
@@ -138,7 +139,7 @@ class UsersController extends Controller
         foreach ($request->roles as $role) {
             $user->assignRole($role);
         }
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.'Actualizo un usuario a las '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return redirect('admin/users')->with('flash_message', 'User updated!');
     }
 
@@ -152,7 +153,7 @@ class UsersController extends Controller
     public function destroy($id)
     {
         User::destroy($id);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Elimino un usuario a las '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return redirect('admin/users')->with('flash_message', 'User deleted!');
     }
 }

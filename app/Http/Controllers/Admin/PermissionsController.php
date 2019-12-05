@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Permission;
 use Illuminate\Http\Request;
+use Auth;
 
 class PermissionsController extends Controller
 {
@@ -24,7 +25,7 @@ class PermissionsController extends Controller
         } else {
             $permissions = Permission::latest()->paginate($perPage);
         }
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Entro a la pagina principal de permisos '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.permissions.index', compact('permissions'));
     }
 
@@ -34,7 +35,8 @@ class PermissionsController extends Controller
      * @return void
      */
     public function create()
-    {
+    {   
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Crear un permiso '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.permissions.create');
     }
 
@@ -50,7 +52,7 @@ class PermissionsController extends Controller
         $this->validate($request, ['name' => 'required']);
 
         Permission::create($request->all());
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Guarda los cambios de permisos a las  '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return redirect('admin/permissions')->with('flash_message', 'Permission added!');
     }
 
@@ -64,7 +66,7 @@ class PermissionsController extends Controller
     public function show($id)
     {
         $permission = Permission::findOrFail($id);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Muestra los permisos nuevos y antiguos  '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.permissions.show', compact('permission'));
     }
 
@@ -78,7 +80,7 @@ class PermissionsController extends Controller
     public function edit($id)
     {
         $permission = Permission::findOrFail($id);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Editar permisos creados  '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.permissions.edit', compact('permission'));
     }
 
@@ -96,7 +98,7 @@ class PermissionsController extends Controller
 
         $permission = Permission::findOrFail($id);
         $permission->update($request->all());
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Actualiza la tabla permisos  '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return redirect('admin/permissions')->with('flash_message', 'Permission updated!');
     }
 
@@ -110,7 +112,7 @@ class PermissionsController extends Controller
     public function destroy($id)
     {
         Permission::destroy($id);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Elimina un permiso '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return redirect('admin/permissions')->with('flash_message', 'Permission deleted!');
     }
 }

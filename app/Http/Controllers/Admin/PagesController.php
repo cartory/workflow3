@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 use App\Page;
 use Illuminate\Http\Request;
+use Auth;
 
 class PagesController extends Controller
 {
@@ -28,6 +29,7 @@ class PagesController extends Controller
             $pages = Page::latest()->paginate($perPage);
         }
 
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' entro a la visualizaciones de paginas a las '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.pages.index', compact('pages'));
     }
 
@@ -38,6 +40,7 @@ class PagesController extends Controller
      */
     public function create()
     {
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' creo una nueva pagina '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.pages.create');
     }
 
@@ -57,7 +60,7 @@ class PagesController extends Controller
         $requestData = $request->all();
         
         Page::create($requestData);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Guarda y redirecciona a la pagina principal a las  '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return redirect('admin/pages')->with('flash_message', 'Page added!');
     }
 
@@ -71,7 +74,7 @@ class PagesController extends Controller
     public function show($id)
     {
         $page = Page::findOrFail($id);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.'Muestra la pagina principal de pages '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.pages.show', compact('page'));
     }
 
@@ -85,7 +88,7 @@ class PagesController extends Controller
     public function edit($id)
     {
         $page = Page::findOrFail($id);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Edito una pages a las '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return view('admin.pages.edit', compact('page'));
     }
 
@@ -107,7 +110,7 @@ class PagesController extends Controller
         
         $page = Page::findOrFail($id);
         $page->update($requestData);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Actualizo una pages a las '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return redirect('admin/pages')->with('flash_message', 'Page updated!');
     }
 
@@ -121,7 +124,7 @@ class PagesController extends Controller
     public function destroy($id)
     {
         Page::destroy($id);
-
+        file_put_contents(public_path('bitacora.txt'),Auth::User()->email.' Elimino una pages a las '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
         return redirect('admin/pages')->with('flash_message', 'Page deleted!');
     }
 }

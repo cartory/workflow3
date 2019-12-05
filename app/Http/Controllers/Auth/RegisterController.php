@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Auth;
 
 class RegisterController extends Controller
 {
@@ -63,10 +64,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $u = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        file_put_contents(public_path('bitacora.txt'),$u->email.' Se registro en el sistema '.date("Y-m-d H:i:s").PHP_EOL,FILE_APPEND);
+
+        return $u;
     }
 }

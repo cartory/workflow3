@@ -1,0 +1,46 @@
+admin@admin.com entro al dashboard a las 2019-12-05 03:48:42
+admin@admin.com entro al registro de actividad 2019-12-05 04:21:27\nadmin@admin.com entro al registro de actividad 2019-12-05 04:22:32\nadmin@admin.com entro al registro de actividad 2019-12-05 04:24:06
+admin@admin.com entro al registro de actividad 2019-12-05 04:26:55
+admin@admin.com entro al dashboard a las 2019-12-05 04:31:46
+admin@admin.com entro a ver los usuarios registrados 2019-12-05 04:33:52
+admin@admin.com elimino la actividad 2019-12-05 04:35:37
+admin@admin.com entro a ver los usuarios registrados 2019-12-05 04:35:37
+admin@admin.com elimino la actividad 2019-12-05 04:38:51
+admin@admin.com entro a ver los usuarios registrados 2019-12-05 04:38:51
+admin@admin.com entro a ver los usuarios registrados 2019-12-05 05:40:20
+admin@admin.com entro a ver los usuarios registrados 2019-12-05 00:42:50
+admin@admin.com creo una nueva pagina 2019-12-05 01:02:06
+admin@admin.com entro a paginas las 2019-12-05 01:03:15
+admin@admin.com creo una nueva pagina 2019-12-05 01:06:07
+admin@admin.com entro a la visualizaciones de paginas a las 2019-12-05 01:06:09
+admin@admin.com creo una nueva pagina 2019-12-05 01:06:27
+admin@admin.com entro a la visualizaciones de paginas a las 2019-12-05 01:06:29
+admin@admin.com entro a la visualizaciones de paginas a las 2019-12-05 01:08:27
+admin@admin.com entro a la visualizaciones de paginas a las 2019-12-05 01:09:13
+admin@admin.com creo una nueva pagina 2019-12-05 01:10:27
+admin@admin.com creo una nueva pagina 2019-12-05 01:10:33
+admin@admin.com Guarda y redirecciona a la pagina principal a las  2019-12-05 01:10:40
+admin@admin.com entro a la visualizaciones de paginas a las 2019-12-05 01:10:40
+admin@admin.comEdito una pages a las  2019-12-05 01:11:03
+admin@admin.com entro a la visualizaciones de paginas a las 2019-12-05 01:13:27
+admin@admin.com Elimino una pages a las 2019-12-05 01:13:32
+admin@admin.com entro a la visualizaciones de paginas a las 2019-12-05 01:13:32
+admin@admin.com Entro a la pagina principal de permisos 2019-12-05 01:21:42
+admin@admin.com Entro a la pagina principal de permisos 2019-12-05 01:44:56
+admin@admin.com Visualizo la pagina principal de roles  2019-12-05 01:48:58
+admin@admin.com Visualizo la pagina principal de roles  2019-12-05 01:55:13
+admin@admin.com Creo un nuevo rol a las 2019-12-05 01:55:15
+admin@admin.com Guarda los cambios de la tabla rol 2019-12-05 01:55:24
+admin@admin.com Visualizo la pagina principal de roles  2019-12-05 01:55:25
+admin@admin.com Mostrar los roles a las 2019-12-05 01:55:31
+admin@admin.com Visualizo la pagina principal de roles  2019-12-05 01:55:35
+admin@admin.com Visualizo la pagina principal de ajustes 2019-12-05 01:58:46
+admin@admin.com Creo un nuevo ajuste a las 2019-12-05 02:23:30
+admin@admin.com Guardo los cambios hechos en ajustes a las  2019-12-05 02:23:38
+admin@admin.com Visualizo la pagina principal de ajustes 2019-12-05 02:23:38
+admin@admin.com Edito un ajuste de la tabla settings a las 2019-12-05 02:23:42
+admin@admin.com Actualizo la tabla settings a las  2019-12-05 02:23:46
+admin@admin.com Visualizo la pagina principal de ajustes 2019-12-05 02:23:47
+admin@admin.com Elimino una final de la tabla settings a las 2019-12-05 02:23:50
+admin@admin.com Visualizo la pagina principal de ajustes 2019-12-05 02:23:50
+ivicita_vc@hotmail.com Se registro en el sistema 2019-12-05 02:54:00
