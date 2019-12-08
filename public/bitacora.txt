@@ -15,7 +15,7 @@ admin@admin.com creo una nueva pagina 2019-12-05 01:06:07
 admin@admin.com entro a la visualizaciones de paginas a las 2019-12-05 01:06:09
 admin@admin.com creo una nueva pagina 2019-12-05 01:06:27
 admin@admin.com entro a la visualizaciones de paginas a las 2019-12-05 01:06:29
-admin@admin.com entro a la visualizaciones de paginas a las 2019-12-05 01:08:27
+admin@admin.com entro a la visualizaciones de paginas a las 2019-12-05 01:08:27u
 admin@admin.com entro a la visualizaciones de paginas a las 2019-12-05 01:09:13
 admin@admin.com creo una nueva pagina 2019-12-05 01:10:27
 admin@admin.com creo una nueva pagina 2019-12-05 01:10:33
@@ -44,3 +44,10 @@ admin@admin.com Visualizo la pagina principal de ajustes 2019-12-05 02:23:47
 admin@admin.com Elimino una final de la tabla settings a las 2019-12-05 02:23:50
 admin@admin.com Visualizo la pagina principal de ajustes 2019-12-05 02:23:50
 ivicita_vc@hotmail.com Se registro en el sistema 2019-12-05 02:54:00
+admin@admin.com entro al dashboard a las 2019-12-05 11:45:32
+admin@admin.com entro al dashboard a las 2019-12-05 11:45:45
+admin@admin.com Ingreso Existosamente a las 2019-12-06 08:35:24
+admin@admin.com entro al dashboard a las 2019-12-06 08:35:33
+admin@admin.com Ingreso Existosamente a las 2019-12-08 11:03:07
+admin@admin.com Ingreso Existosamente a las 2019-12-08 11:39:27
+admin@admin.com Ingreso Existosamente a las 2019-12-08 11:39:58

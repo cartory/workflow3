@@ -2,13 +2,13 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use jazmy\FormBuilder\Traits\HasFormBuilderTraits;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use jazmy\FormBuilder\Traits\HasFormBuilderTraits;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject
 {
     use SoftDeletes, HasFormBuilderTraits;
     use Notifiable, HasRoles;
@@ -25,26 +25,40 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function getTextFont(){
+    public function getTextFont()
+    {
         return Theme::findOrFail($this->theme_id)->textFont;
     }
 
-    public function getBackgroundColor(){
+    public function getBackgroundColor()
+    {
         return Theme::findOrFail($this->theme_id)->backgroundColor;
     }
 
-    public function theme(){
+    public function theme()
+    {
         return $this->belongsTo(Theme::class, 'foreign_key', 'theme_id');
     }
 
-    public function roles(){
+    public function roles()
+    {
         return $this->belongsToMany(Role::class);
     }
 
-    public function hasRole($role){
-        if ($this->roles()->where('name', $role)->first()){
+    public function hasRole($role)
+    {
+        if ($this->roles()->where('name', $role)->first()) {
             return true;
         }
         return false;
+    }
+
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+    public function getJWTCustomClaims()
+    {
+        return [];
     }
 }
