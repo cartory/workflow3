@@ -15,8 +15,15 @@
     @stack('styles')
 </head>
 <body>
-    @include('index.menu')
-    @yield('content')
+    <header class="header">
+        @include('layouts.menu')
+    </header>
+    <main class="content">
+        @yield('content')
+    </main>
+    <footer class="page-footer orange">
+        @include('index.footer')
+    </footer>
     {{-- Scripts --}}
     <link href="{{ asset('js/materialize.min.js') }}" rel="stylesheet">
     @stack('scripts')
