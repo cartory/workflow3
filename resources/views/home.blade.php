@@ -13,7 +13,7 @@
         {{-- PERFIL --}}
         <article class="event">
             <figure class="event-imageContainer">
-                <img class="event-image" src="../images/platzi-conf.jpg" width="500" />
+                <img class="event-image" src="./images/perfil.jpg" width="400" />
             </figure>
             <div class="event-detail">
                 <h3 class="event-tittle">Perfil</h3>
@@ -26,7 +26,7 @@
         {{-- TEMAS --}}
         <article class="event">
             <figure class="event-imageContainer">
-                <img class="event-image" src="../images/platzi-conf.jpg" width="500" />
+                <img class="event-image" src="./images/tema.jpg" width="500" />
             </figure>
             <div class="event-detail">
                 <h3 class="event-tittle">Temas</h3>
@@ -40,7 +40,7 @@
         {{-- DIAGRAMADOR --}}
         <article class="event">
             <figure class="event-imageContainer">
-                <img class="event-image" src="../images/platzi-conf.jpg" width="500" />
+                <img class="event-image" src="./images/diagramador.png" width="500" />
             </figure>
             <div class="event-detail">
                 <h3 class="event-tittle">Diagramador</h3>
@@ -53,7 +53,7 @@
         {{-- FORMULARIOS --}}
         <article class="event">
             <figure class="event-imageContainer">
-                <img class="event-image" src="../images/platzi-conf.jpg" width="500" />
+                <img class="event-image" src="./images/formulario.png" width="500" />
             </figure>
             <div class="event-detail">
                 <h3 class="event-tittle">Formularios</h3>
@@ -67,7 +67,7 @@
         {{-- ADMINISTRADOR --}}
         <article class="event">
             <figure class="event-imageContainer">
-                <img class="event-image" src="../images/platzi-conf.jpg" width="500" />
+                <img class="event-image" src="./images/administrador.jpg" width="500" />
             </figure>
             <div class="event-detail">
                 <h3 class="event-tittle">Administrador</h3>
@@ -81,7 +81,7 @@
         {{-- BITACORA Y BACKUP --}}
         <article class="event">
             <figure class="event-imageContainer">
-                <img class="event-image" src="../images/platzi-conf.jpg" width="500" />
+                <img class="event-image" src="./images/bitacora.png" width="500" />
             </figure>
             <div class="event-detail">
                 <h3 class="event-tittle">Bitacora y Backup</h3>

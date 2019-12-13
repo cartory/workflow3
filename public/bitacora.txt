@@ -843,6 +843,7 @@ pedro@gmail.com Ingreso Existosamente a las 2019-12-13 05:00:19
 pedro@gmail.com Ingreso Existosamente a las 2019-12-13 05:00:21
 pedro@gmail.com Ingreso Existosamente a las 2019-12-13 05:00:23
 pedro@gmail.com Ingreso Existosamente a las 2019-12-13 05:00:24
+<<<<<<< HEAD
 pedro@gmail.com Ingreso Existosamente a las 2019-12-13 05:03:26
 pedro@gmail.com Ingreso Existosamente a las 2019-12-13 05:03:26
 pedro@gmail.com Ingreso Existosamente a las 2019-12-13 05:03:27
@@ -853,3 +854,25 @@ pedro@gmail.com Ingreso Existosamente a las 2019-12-13 05:03:35
 pedro@gmail.com Ingreso Existosamente a las 2019-12-13 05:03:37
 pedro@gmail.com Ingreso Existosamente a las 2019-12-13 05:03:39
 admin@admin.com Ingreso Existosamente a las 2019-12-13 05:43:15
+=======
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:09:26
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:28:36
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:28:42
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:31:57
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:33:39
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:34:46
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:34:49
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:35:44
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:36:56
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:37:15
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:38:06
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:39:06
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:39:20
+>>>>>>> 73605ae3836caafffb3cfda1977bd8328c555023
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:45:02
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:45:18
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:45:24
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:45:27
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:45:30
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:45:41
+admin@admin.com Ingreso Existosamente a las 2019-12-13 05:45:54
