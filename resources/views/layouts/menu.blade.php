@@ -3,10 +3,10 @@
         WORKFLOW
     </a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="/home">home</a></li>
+            {{-- <li><a href="/home">home</a></li>
             <li>
 
-            </li>
+            </li> --}}
             @auth
             <li><a href="{{ url('/home') }}">Home</a></li>
             <li class="nav-item dropdown">

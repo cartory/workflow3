@@ -23,6 +23,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/themes', 'ThemeController@index');
 Route::put('themes/{id}', 'ThemeController@update');
 
+Route::get('/bitacora', function(){
+    return response()->download("../public/bitacora.txt");
+});
+
 // Route::resource('themes', 'ThemeController');
 
 //  ADMIN PANEL ROUTES
