@@ -30,6 +30,10 @@ class User extends Authenticatable implements JWTSubject
         return Theme::findOrFail($this->theme_id)->textFont;
     }
 
+    public function getTextColor(){
+        return Theme::findOrFail($this->theme_id)->textColor;
+    }
+
     public function getBackgroundColor()
     {
         return Theme::findOrFail($this->theme_id)->backgroundColor;

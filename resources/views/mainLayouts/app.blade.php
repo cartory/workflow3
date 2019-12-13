@@ -12,6 +12,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link href="{{ asset('css/materialize.min.css') }}" rel="stylesheet">
+    @auth
+        <style>
+            body {
+                background: {{ Auth::user()->getBackgroundColor() }} !important;
+                font-size: {{ Auth::user()->getTextFont() }}px !important;
+                color: {{ Auth::user()->getTextColor() }};
+            }
+        </style>
+    @endauth
     @stack('styles')
 </head>
 <body>
