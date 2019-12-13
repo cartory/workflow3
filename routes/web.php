@@ -24,8 +24,8 @@ Route::get('/themes', 'ThemeController@index');
 Route::put('themes/{id}', 'ThemeController@update');
 
 Route::get('/bitacora', function(){
-    return response()->download("../public/bitacora.txt");
-});
+    return response()->download("../public/bitacora.log");
+})->middleware('admin');
 
 // Route::resource('themes', 'ThemeController');
 
