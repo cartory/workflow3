@@ -42,7 +42,7 @@ class Role_User_TableSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@admin.com',
             'email_verified_at' => now(),
-            'password' => 'admin',
+            'password' => bcrypt('admin'),
         ])->save();
         $admin->roles()->attach($admin_role);
     }
