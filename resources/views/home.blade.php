@@ -1,6 +1,11 @@
 @extends('mainLayouts.app')
 @push('styles')
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+<style>
+    .event-description {
+        text-align: center;
+    }
+</style>
 @endpush
 @section('content')
 <section class="event-list" id="eventos">
@@ -13,11 +18,9 @@
             <div class="event-detail">
                 <h3 class="event-tittle">Perfil</h3>
                 <p class="event-description">
-                    El evento más grande sobre gente que quiere aprender
-                    más de internet. En este evento te comparto cómo tener
-                    una vida de constante aprendizaje
+                    Ver los datos personales del usuario <br>
                 </p>
-                <a class="event-url" href="#">Ver plática</a>
+                <a class="event-url" href="#">Ver Perfil</a>
             </div>
         </article>
         {{-- TEMAS --}}
@@ -28,11 +31,10 @@
             <div class="event-detail">
                 <h3 class="event-tittle">Temas</h3>
                 <p class="event-description">
-                    El evento más grande sobre gente que quiere aprender
-                    más de internet. En este evento te comparto cómo tener
-                    una vida de constante aprendizaje
+                    Elija entre los temas disponibles <br>
+                    un tema acorde a sus gustos.
                 </p>
-                <a class="event-url" href="/themes">Ver plática</a>
+                <a class="event-url" href="/themes">Ver Temas</a>
             </div>
         </article>
         {{-- DIAGRAMADOR --}}
@@ -43,11 +45,9 @@
             <div class="event-detail">
                 <h3 class="event-tittle">Diagramador</h3>
                 <p class="event-description">
-                    El evento más grande sobre gente que quiere aprender
-                    más de internet. En este evento te comparto cómo tener
-                    una vida de constante aprendizaje
+                    Cree su propio modelo de flujo para su empresa
                 </p>
-                <a class="event-url" href="https://www.draw.io/" target="_blank">Ver plática</a>
+                <a class="event-url" href="https://www.draw.io/" target="_blank">Ver Diagramador</a>
             </div>
         </article>
         {{-- FORMULARIOS --}}
@@ -58,11 +58,10 @@
             <div class="event-detail">
                 <h3 class="event-tittle">Formularios</h3>
                 <p class="event-description">
-                    El evento más grande sobre gente que quiere aprender
-                    más de internet. En este evento te comparto cómo tener
-                    una vida de constante aprendizaje
+                    Genere sus formularios dinámicos <br>
+                    para sus usuarios
                 </p>
-                <a class="event-url" href="/form-builder/forms" target="_blank">Ver plática</a>
+                <a class="event-url" href="/form-builder/forms" target="_blank">Ver Formularios</a>
             </div>
         </article>
         {{-- ADMINISTRADOR --}}
@@ -73,11 +72,10 @@
             <div class="event-detail">
                 <h3 class="event-tittle">Administrador</h3>
                 <p class="event-description">
-                    El evento más grande sobre gente que quiere aprender
-                    más de internet. En este evento te comparto cómo tener
-                    una vida de constante aprendizaje
+                    Controle los aspectas del sistema <br>
+                    y los usuarios registrados
                 </p>
-                <a class="event-url" href="/admin">Ver plática</a>
+                <a class="event-url" href="/admin">Ver Panel Admin</a>
             </div>
         </article>
         {{-- BITACORA Y BACKUP --}}
@@ -88,11 +86,11 @@
             <div class="event-detail">
                 <h3 class="event-tittle">Bitacora y Backup</h3>
                 <p class="event-description">
-                    El evento más grande sobre gente que quiere aprender
-                    más de internet. En este evento te comparto cómo tener
-                    una vida de constante aprendizaje
+                    Realice copias de seguridad del sistema <br>
+                    y obtenga un archivo con las actividades <br>
+                    de los usuarios.
                 </p>
-                <a class="event-url" href="#">Ver plática</a>
+                <a class="event-url" href="/backupmanager">Ver Backup</a>
             </div>
         </article>
     </div>
