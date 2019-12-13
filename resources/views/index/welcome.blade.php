@@ -23,7 +23,7 @@
                 </h5>
             </div>
             <div class="row center">
-                <a href="https://github.com/cartory/workflow3.git" id="download-button" target="_blank"
+                <a href="https://github.com/cartory/workflow3.git" id="download-button" target="_blank" title="Ver Repositorio git"
                     class="btn-large waves-effect waves-light orange">Descargar PROYECTO</a>
             </div>
             <br><br>

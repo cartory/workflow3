@@ -1,41 +1,22 @@
-@extends('layouts.app')
-
+@extends('mainLayouts.app')
 @section('content')
-<h1>
-    Cambiar de tema
-</h1>
-<div class="container" style="background: lightgray;">
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Color de fondo</th>
-                <th scope="col">Color de letra</th>
-                <th scope="col">Tamaño de letra</th>
-                <th scope="col">Cambiar</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($themes as $theme)
-            <tr>
-                <td>
-                    <input type="text" value="{{ $theme->backgroundColor }}" disabled>
-                </td>
-                <td>
-                    <input type="text" value="{{ $theme->textColor }}" disabled>
-                </td>
-                <td>
-                    <input type="number" value="{{ $theme->textFont }}" disabled>
-                </td>
-                <td>
+<div class="container" style="background: gray;">
+    <div class="row">
+        @foreach ($themes as $theme)
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img width="250px" height="250px" src="./images/temas/{{ $theme->backgroundColor }}.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
                     <form action="/themes/{{ $theme->id }}" method="post">
                         @method('PUT')
                         @csrf
                         <button type="submit">Cambiar</button>
                     </form>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
 </div>
 @endsection
