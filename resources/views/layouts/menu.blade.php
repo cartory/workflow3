@@ -3,24 +3,24 @@
         WORKFLOW
     </a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="#">Navbar WEB</a></li>
+            <li><a href="/home">home</a></li>
             <li>
 
             </li>
-        @auth
+            @auth
             <li><a href="{{ url('/home') }}">Home</a></li>
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ Auth::user()->name }} <span class="caret"></span>
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+            </li>
+            <li>
+                <a class="dropdown-item" href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                         Logout
-                    </a>
-                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                </a>
+                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                         @csrf
-                    </form>
-                </div>
+                </form>
             </li>
         @else
             <li><a href="{{ route('login') }}">Login</a></li>
