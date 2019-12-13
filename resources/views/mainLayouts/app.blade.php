@@ -19,6 +19,7 @@
         @include('layouts.menu')
     </header>
     <main class="content">
+        <br>
         @yield('content')
     </main>
     <footer class="page-footer orange">

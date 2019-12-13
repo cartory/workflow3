@@ -1,4 +1,4 @@
-@extends('main-layouts.app')
+@extends('mainLayouts.app')
 @section('title', 'Admin-LOL')
 @section('content')
     <main class="py-4">
