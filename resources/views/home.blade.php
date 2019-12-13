@@ -20,7 +20,7 @@
                 <p class="event-description">
                     Ver los datos personales del usuario <br>
                 </p>
-                <a class="event-url" href="#">Ver Perfil</a>
+                <a class="event-url" href="/perfil">Ver Perfil</a>
             </div>
         </article>
         {{-- TEMAS --}}
@@ -65,6 +65,7 @@
             </div>
         </article>
         {{-- ADMINISTRADOR --}}
+    @if (Auth::user()->hasRole('admin'))            
         <article class="event">
             <figure class="event-imageContainer">
                 <img class="event-image" src="./images/administrador.jpg" width="500" />
@@ -98,6 +99,7 @@
                 </form>
             </div>
         </article>
+    @endif
     </div>
 </section>
 <br>

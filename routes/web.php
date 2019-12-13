@@ -22,10 +22,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/themes', 'ThemeController@index');
 Route::put('themes/{id}', 'ThemeController@update');
+Route::get('/perfil', 'ProfileController@index')->middleware('auth');
 
 Route::get('/bitacora', function(){
     return response()->download("../public/bitacora.log");
-})->middleware('admin');
+});
 
 // Route::resource('themes', 'ThemeController');
 
