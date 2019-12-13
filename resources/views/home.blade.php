@@ -91,6 +91,11 @@
                     de los usuarios.
                 </p>
                 <a class="event-url" href="/backupmanager">Ver Backup</a>
+                <form action="/bitacora" method="get">
+                    @csrf
+                    <br>
+                    <button class="btn btn-primary" type="submit">Descargar bitacora</button>
+                </form>
             </div>
         </article>
     </div>
