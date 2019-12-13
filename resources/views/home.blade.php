@@ -6,6 +6,7 @@
     <br>
     <section class="event-list" id="eventos">
         <div class="container">
+            {{-- PERFIL --}}
             <article class="event">
                 <figure class="event-imageContainer">
                     <img class="event-image" src="../images/platzi-conf.jpg" width="500" />
@@ -17,9 +18,10 @@
                         más de internet. En este evento te comparto cómo tener
                         una vida de constante aprendizaje
                     </p>
-                    <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver plática</a>
+                    <a class="event-url" href="#">Ver plática</a>
                 </div>
             </article>
+            {{-- TEMAS --}}
             <article class="event">
                 <figure class="event-imageContainer">
                     <img class="event-image" src="../images/platzi-conf.jpg" width="500" />
@@ -31,9 +33,10 @@
                         más de internet. En este evento te comparto cómo tener
                         una vida de constante aprendizaje
                     </p>
-                    <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver plática</a>
+                    <a class="event-url" href="/themes">Ver plática</a>
                 </div>
             </article>
+            {{-- DIAGRAMADOR --}}
             <article class="event">
                 <figure class="event-imageContainer">
                     <img class="event-image" src="../images/platzi-conf.jpg" width="500" />
@@ -45,9 +48,10 @@
                         más de internet. En este evento te comparto cómo tener
                         una vida de constante aprendizaje
                     </p>
-                    <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver plática</a>
+                    <a class="event-url" href="https://www.draw.io/" target="_blank">Ver plática</a>
                 </div>
             </article>
+            {{-- FORMULARIOS --}}
             <article class="event">
                 <figure class="event-imageContainer">
                     <img class="event-image" src="../images/platzi-conf.jpg" width="500" />
@@ -59,9 +63,10 @@
                         más de internet. En este evento te comparto cómo tener
                         una vida de constante aprendizaje
                     </p>
-                    <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver plática</a>
+                    <a class="event-url" href="/form-builder/forms" target="_blank">Ver plática</a>
                 </div>
             </article>
+            {{-- ADMINISTRADOR --}}
             <article class="event">
                 <figure class="event-imageContainer">
                     <img class="event-image" src="../images/platzi-conf.jpg" width="500" />
@@ -73,9 +78,10 @@
                         más de internet. En este evento te comparto cómo tener
                         una vida de constante aprendizaje
                     </p>
-                    <a class="event-url" href="#" target="_blank">Ver plática</a>
+                    <a class="event-url" href="/admin">Ver plática</a>
                 </div>
             </article>
+            {{-- BITACORA Y BACKUP --}}
             <article class="event">
                 <figure class="event-imageContainer">
                     <img class="event-image" src="../images/platzi-conf.jpg" width="500" />
@@ -87,7 +93,7 @@
                         más de internet. En este evento te comparto cómo tener
                         una vida de constante aprendizaje
                     </p>
-                    <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver plática</a>
+                    <a class="event-url" href="#">Ver plática</a>
                 </div>
             </article>
         </div>
