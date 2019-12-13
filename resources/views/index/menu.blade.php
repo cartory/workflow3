@@ -1,9 +1,6 @@
 <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="http://localhost:8000" class="brand-logo">WORKFLOW</a>
         <ul class="right hide-on-med-and-down">
-            <li>
-                <a href="https://github.com/cartory/workflow3.git" target="_blank" >Repositorio</a>
-            </li>
         @auth
             <li><a href="{{ url('/home') }}">Home</a></li>
         @else
